@@ -7,7 +7,6 @@ include_once "templates/header.php";
 ?>
 
 <div class="text-input-holder">
-    this is test
     <input type="text" placeholder="Search...">
 </div>
 <div class="input-buttons-holder">
