@@ -1,0 +1,3 @@
+1. install nodejs
+2. install sass: npm install -g sass
+3. navigate to css folder inside project and use command: sass scss/style.scss style.css
