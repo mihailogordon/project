@@ -1,8 +1,11 @@
 <?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "doskocicedb";
+
+include_once "global_variables.php";
+
+$servername = SERVER_NAME;
+$username = USERNAME;
+$password = PASSWORD;
+$dbname = DATABASE_NAME;
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
