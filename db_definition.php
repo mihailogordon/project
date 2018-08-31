@@ -2,7 +2,7 @@
 $servername = "localhost";
 $username = "root";
 $password = "";
-$dbname = "doskocidb";
+$dbname = "doskocicedb";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password);
@@ -34,6 +34,7 @@ lastname VARCHAR(30) NOT NULL,
 email VARCHAR(50),
 doskocica_initial VARCHAR(50),
 doskocica VARCHAR(3000),
+rating FLOAT(5),
 reg_date TIMESTAMP
 )";
 

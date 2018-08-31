@@ -6,10 +6,12 @@
 include_once "templates/header.php";
 ?>
 
-<div class="text-input-holder">
-    <input type="text" placeholder="Search...">
-</div>
-<div class="input-buttons-holder">
-    <a href="#" class="button-search">Pretrazi</a>
-    <a href="#" class="button-search">Iz prve ruke</a>
-</div>
+<form class="main-search-holder" method="post" action="functions/main-search.php">
+    <div class="text-input-holder">
+        <input class="main-search-input" name="main_search_input" type="text" placeholder="Search...">
+    </div>
+    <div class="input-buttons-holder">
+        <input type="submit" class="button-search-main" name="main_button" value="Pretrazi">
+        <input type="submit" class="button-search-first" name="quick_button" value="Iz prve ruke">
+    </div>
+</form>
