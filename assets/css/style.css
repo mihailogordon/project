@@ -1,3 +1,5 @@
-
+form .disabled-input {
+  cursor: not-allowed;
+}
 
 /*# sourceMappingURL=style.css.map */

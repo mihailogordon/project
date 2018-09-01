@@ -5,5 +5,3 @@ foreach ($_GET as $result){
         echo $result['doskocica'] . "<br>";
     }
 };
-
-?>

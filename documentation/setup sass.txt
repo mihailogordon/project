@@ -1,3 +1,4 @@
-1. install nodejs
-2. install sass: npm install -g sass
-3. navigate to css folder inside project and use command: sass scss/style.scss style.css
+1. Install nodejs
+2. Install sass: npm install -g sass
+3. In cmd navigate to css folder inside project "cd E:\xampp\htdocs\project\assets\css"
+4. Use command "sass scss/style.scss style.css" to compile scss to css

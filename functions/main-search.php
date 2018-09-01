@@ -29,7 +29,7 @@ if(isset($_POST['main_button']) || isset($_POST['quick_button'])){
         }
 
     } else{
-        echo "Error occured while executing query" . $conn->error;
+        echo "Error occured while executing query: " . $conn->error;
     }
 
     if(!empty($query_results_array)){
