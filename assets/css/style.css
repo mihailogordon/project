@@ -1,4 +1,7 @@
-form .disabled-input {
+form .search-button {
+  cursor: pointer;
+}
+form .search-button.disabled-input {
   cursor: not-allowed;
 }
 

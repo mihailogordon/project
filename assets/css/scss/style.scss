@@ -1,5 +1,9 @@
 form{
-  .disabled-input{
-    cursor: not-allowed;
+  .search-button{
+    cursor: pointer;
+
+    &.disabled-input{
+      cursor: not-allowed;
+    }
   }
 }
