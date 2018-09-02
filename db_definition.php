@@ -37,7 +37,7 @@ lastname VARCHAR(30) NOT NULL,
 email VARCHAR(50),
 doskocica_initial VARCHAR(50),
 doskocica VARCHAR(3000),
-rating FLOAT(5),
+rating FLOAT(5) NOT NULL DEFAULT '0',
 reg_date TIMESTAMP
 )";
 

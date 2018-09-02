@@ -1,5 +1,6 @@
 $(document).ready(function(){
     initMainSearchAvailability();
+    initSearchResultsStarsRating();
 });
 
 function initMainSearchAvailability(){
@@ -21,6 +22,29 @@ function initMainSearchAvailability(){
                     thisFormSubmit.prop("disabled", true);
                     thisFormSubmit.addClass("disabled-input");
                 }
+            })
+        })
+    }
+}
+
+function initSearchResultsStarsRating(){
+    var rateHolder = $('.search-result-rate-now');
+
+    if(rateHolder.length){
+        rateHolder.each(function(){
+            var thisHolder = $(this),
+                emptyStars = thisHolder.find('.rating-stars-empty'),
+                emptyStar = emptyStars.find('.empty-star'),
+                aboveStars = thisHolder.find('.rating-stars-above');
+
+            emptyStar.each(function(){
+                emptyStar.on('click', function(){
+                    var thisStar = $(this),
+                        thisValue = thisStar.data('value'),
+                        aboveStarsWidth = thisValue * 20;
+
+                    aboveStars.css("width", aboveStarsWidth + "%");
+                })
             })
         })
     }

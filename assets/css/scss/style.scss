@@ -1,9 +1,84 @@
+strong{
+  font-weight: 700;
+}
+
 form{
   .search-button{
-    cursor: pointer;
+	cursor: pointer;
 
-    &.disabled-input{
-      cursor: not-allowed;
+	&.disabled-input{
+	  cursor: not-allowed;
+	}
+  }
+}
+
+.search-results-container{
+
+  .rating-holder{
+
+	position: relative;
+	display: inline-block;
+	vertical-align: middle;
+    margin-left: 10px;
+
+	.rating-stars-below,
+	.rating-stars-above{
+	  &:before{
+		content: '\f005 \f005 \f005 \f005 \f005';
+		display: inline-block;
+		font-family: 'FontAwesome';
+		letter-spacing: 3px;
+		font-size: 14px;
+		overflow: hidden;
+		position: relative;
+		vertical-align: middle;
+		text-align: left;
+	  }
+	}
+
+    .empty-star{
+      display: inline-block;
+      font-family: "FontAwesome";
+      letter-spacing: 3px;
+      font-size: 14px;
+      overflow: hidden;
+      position: relative;
+      vertical-align: middle;
+      text-align: left;
+      color: #ff2d00;
     }
+
+    .rating-stars-below{
+
+      position: relative;
+      display: inline-block;
+      vertical-align: middle;
+      width: auto;
+      color: #ff2d00;
+
+      &:before{
+        content: '\f006 \f006 \f006 \f006 \f006'
+      }
+
+    }
+
+    .rating-stars-above{
+
+      position: absolute;
+      top: 0;
+      left: 0;
+      overflow: hidden;
+      color: #ff2d00;
+      z-index: -1;
+
+    }
+  }
+
+}
+
+.search-results-container{
+  .search-result-rate-trigger{
+    text-decoration: none;
+    color: #000;
   }
 }

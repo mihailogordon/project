@@ -21,19 +21,22 @@ if(isset($_POST['main_button']) || isset($_POST['quick_button'])){
             while ($row = $query_results->fetch_assoc()) {
                 $query_results_counter++;
                 /*echo $query_results_counter . ". " . $row['doskocica'] . '<br/>';*/
-                $query_results_array[] = $row;
+                $query_results_array[$row['rating']] = $row['doskocica'];
                 if(isset($_POST['quick_button'])){
                     break;
                 }
             }
         }
 
+        $query_results_array['number_of_results'] = $query_results_counter;
+        $query_results_array['initial_word'] = $input_value;
+
     } else{
         echo "Error occured while executing query: " . $conn->error;
     }
 
     if(!empty($query_results_array)){
-        header('Location: ../search-results.php?result=' . http_build_query($query_results_array));
+        header('Location: ../search-results.php?' . http_build_query($query_results_array));
     }
 
 }
