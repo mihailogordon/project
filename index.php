@@ -1,6 +1,6 @@
 <?php
 /*Create required DB and Tables in it*/
-include_once 'db_definition.php';
+//include_once 'db_definition.php';
 ?>
 <?php
 include_once "templates/header.php";
